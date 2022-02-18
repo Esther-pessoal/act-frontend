@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Open+Sans:wght@500&display=swap');
+
 html,
 body {
   padding: 0;
@@ -13,4 +15,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+:root{
+  --primary: #9e1910;
+  --secondary: #54de18;
+  --background: #f6f6f6;
+  --white: #ffffff;
+  --black: #0f0302;
+  --text: #0f030246;
+  --font-family: 'Inter', sans-serif;
 }
