@@ -1,11 +1,14 @@
 import { InputStyled } from "../common/components/Input";
+import InputContext from "../common/contexts/InputContext";
 import Layout from "../common/layout/Index";
+import { FormContainer } from "../Profile/Container/FormContainer";
 
 function Home () {
   return (
     <Layout title="Home">
-      <h2>Insira seu nome</h2>
-      <InputStyled name="name" />
+      <InputContext>
+      <FormContainer />
+      </InputContext>
     </Layout>
   );
 }

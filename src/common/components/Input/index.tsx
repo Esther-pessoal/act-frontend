@@ -1,20 +1,20 @@
 import { Props } from "./types";
 import { Input} from "@mui/material"
-import { useForm } from "react-hook-form";
-import InputContext from "../../contexts/InputContext";
+import { Controller, useForm } from "react-hook-form";
 
-
-
-export function InputStyled(props: Props){
-    const {register, formState: {errors}} = useForm()
+export function InputStyled(props: Props) {
+    const { control,
+    formState: {errors} 
+} = useForm();
     return (
-        <InputContext> 
-        <Input
-        {...register(props.name)}
-        data-test={`input-${props.name}`}
-        type={!!props.type ? props.type : "string"}
-        />
+        <> 
+        <Controller
+        name={props.name}
+        control={control}
+        defaultValue={!!props.default ? props.default : ""}
+        render={({ field }) => <Input {...field} data-test={`input-${props.name}`}/>}
+      />
     <p>{errors[props.name]?.message}</p>
-    </InputContext>
+    </>
     );
 }
