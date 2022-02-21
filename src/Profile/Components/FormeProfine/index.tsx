@@ -3,7 +3,7 @@ import { InputStyled } from "../../../common/components/Input";
 
 export function FormProfile(){
     return(
-        <Grid container>
+        <Grid container alignItems="center" direction="column">
             <Grid item>
                 <span>Nome</span>
                 <InputStyled name="name"/>

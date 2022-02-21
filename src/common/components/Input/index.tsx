@@ -1,11 +1,11 @@
 import { Props } from "./types";
 import { Input} from "@mui/material"
-import { Controller, useForm } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 
 export function InputStyled(props: Props) {
     const { control,
     formState: {errors} 
-} = useForm();
+} = useFormContext();
     return (
         <> 
         <Controller
